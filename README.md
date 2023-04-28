@@ -1,3 +1,24 @@
+# abcm2ps-edits
+
+The goal of this repository is to discover specific mechanisms in the various
+open source ABC parsers and try to bring them into the original _abcm2ps_
+source. A secondary goal is to develop a binary with specific functionality in
+support of a GitHub Action for converting ABC notation to PDF without the need
+of a specific OS, specific programs, or build steps other than copying a
+GitHub template.
+
+
+## TODO
+
+- [ ] time signature using font glyphs
+- [ ] other symbols using font glyphs
+  - (TODO: add a list of missing/desired symbols here)
+
+
+The original **README.md** follows:
+
+-----
+
 # abcm2ps
 
 [![Build Status](https://travis-ci.org/leesavide/abcm2ps.svg?branch=master)](https://travis-ci.org/leesavide/abcm2ps)
