@@ -5,13 +5,10 @@ Getting the source files
 
 abcm2ps is now distributed from a GitHub repository.
 
-You may get the source files either as a `tar.gz` or `.zip` file from
+You may get the source files either as a `tar.gz` or `.zip` file
+or by cloning the repository with 'git' from
 
-	https://github.com/leesavide/abcm2ps.git
-
-or by cloning the repository with 'git'
-
-	https://github.com/leesavide/abcm2ps.git
+	https://github.com/PennRobotics/abcm2ps-edits.git
 
 (you may use `--depth=1` if you don't want the full `git` history)
 
@@ -29,14 +26,9 @@ CFLAGS="-g -O2 -Wall -pipe"
 srcdir=.
 prefix=/usr/local
 INSTALL="/usr/bin/install -c"
-INSTALL_DATA='${INSTALL} -m 644'
 INSTALL_PROGRAM='${INSTALL}'
-exec_prefix='${prefix}'
+exec_prefix='${prefix}'	
 bindir='${exec_prefix}/bin'
-libdir='${exec_prefix}/lib'
-datarootdir='${prefix}/share'
-docdir='${prefix}/doc'
-mandir='${datarootdir$/man'
 DEFAULT_FDIR="$prefix/share/abcm2ps"
 
 The script 'configure' first tries to read the file 'custom'
