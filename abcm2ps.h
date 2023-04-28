@@ -63,9 +63,9 @@ enum accidentals {
 #endif
 #endif
 
-#define CM  * 37.8 /* factor to transform cm to pt */
+#define CM  * 28.3465 /* factor to transform cm to pt */
 #define PT   /* factor to transform pt to pt */
-#define IN  * 96.0 /* factor to transform inch to pt */
+#define IN  * 72.0 /* factor to transform inch to pt */
 
 /* basic page dimensions */
 #ifdef A4_FORMAT
