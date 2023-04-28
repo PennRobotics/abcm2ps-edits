@@ -32,9 +32,6 @@ case "$srcdir" in
         exit 1
 esac
 
-if test "x$INSTALL_DATA" = x; then
-	INSTALL_DATA='${INSTALL} -m 644'
-fi
 if test "x$INSTALL_PROGRAM" = x; then
 	INSTALL_PROGRAM='${INSTALL}'
 fi
@@ -44,15 +41,6 @@ if test "x$exec_prefix" = x; then
 fi
 if test "x$bindir" = x; then
 	bindir='${exec_prefix}/bin'
-fi
-if test "x$datarootdir" = x; then
-	datarootdir='${prefix}/share'
-fi
-if test "x$docdir" = x; then
-	docdir='${prefix}/share/doc'
-fi
-if test "x$mandir" = x; then
-	mandir='${prefix}/share/man'
 fi
 if test "x$DEFAULT_FDIR" = x; then
 	DEFAULT_FDIR="$prefix/share/abcm2ps"
@@ -70,19 +58,14 @@ s+@CFLAGS@+$CFLAGS+
 s+@LDFLAGS@+$LDFLAGS+
 s+@LDLIBS@+$LDLIBS+
 s+@INSTALL@+$INSTALL+
-s+@INSTALL_DATA@+$INSTALL_DATA+
 s+@INSTALL_PROGRAM@+$INSTALL_PROGRAM+
 s+@prefix@+$prefix+
 s+@exec_prefix@+$exec_prefix+
 s+@srcdir@+$srcdir+
-s+@bindir@+$bindir+
-s+@datarootdir@+$datarootdir+
-s+@mandir@+$mandir+
-s+@docdir@+$docdir+" "$srcdir/Makefile.in" > Makefile
+s+@bindir@+$bindir+" "$srcdir/Makefile.in" > Makefile
 echo "Makefile created"
 
 sed "s/define VERSION xxx/\define VERSION \"$VERSION\"/
 s/define VDATE xxx/define VDATE \"$VDATE\"/
-s+define DEFAULT_FDIR xxx+define DEFAULT_FDIR \"$DEFAULT_FDIR\"+
 " "$srcdir/config.h.in" > config.h
 echo "config.h created"
