@@ -17,6 +17,7 @@ GitHub template.
 - [ ] time signature using font glyphs
 - [ ] other symbols using font glyphs
   - (TODO: add a list of missing/desired symbols here)
+- [ ] fix build status link in original **README.md** (using badge on Action script, probably)
 
 
 The original **README.md** follows:
@@ -25,7 +26,7 @@ The original **README.md** follows:
 
 # abcm2ps
 
-[![Build Status](https://travis-ci.org/leesavide/abcm2ps.svg?branch=master)](https://travis-ci.org/leesavide/abcm2ps)
+~~[![Build Status](https://travis-ci.org/leesavide/abcm2ps.svg?branch=master)](https://travis-ci.org/leesavide/abcm2ps)~~
 
 ### Overview
 
