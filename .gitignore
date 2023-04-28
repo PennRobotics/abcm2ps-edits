@@ -1,0 +1,9 @@
+# Object files
+*.o
+
+# Executables
+abcm2ps
+
+# Configuration
+config.h
+Makefile
