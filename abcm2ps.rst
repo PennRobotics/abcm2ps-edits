@@ -20,7 +20,7 @@ DESCRIPTION
 
 ``abcm2ps`` translates tunes written in
 the ABC music notation format to customary sheet music scores in
-PostScript or SVG. It is based on ``abc2ps`` 1.2.5 and was
+PostScript. It is based on ``abc2ps`` 1.2.5 and was
 developed mainly to print Baroque organ scores that have
 independent voices played on multiple keyboards and a
 pedal-board. The program has since been extended to support
@@ -50,14 +50,6 @@ The general output format is the last found in the command line.
 It may be:
 
 -E    for Encapsulated PostScript, one file per tune
-
--g    for SVG, one file per tune
-
--v    for SVG, one file per page
-
--X    for XHTML+SVG
-
--z    for (X)HTML+SVG with (X)HTML+ABC input
 
 (see below for more information)
 
@@ -167,15 +159,6 @@ List of the options
 
    This corresponds to the ``%%graceslurs`` formatting parameter.
 
--g
-    Produce SVG output instead of EPS.
-
-    In this mode each tune goes to a different file which name
-    is 'Outnnn.svg' (see option '-O').
-
-    If the output is stdout (option '-O-'), all the SVG images
-    are output without XML header.
-
 -H
     Display the current format values.
 
@@ -190,7 +173,7 @@ List of the options
    This corresponds to the ``%%indent`` formatting parameter.
 
 -i, +i
-    Insert a red cercle around the errors in the PostScript output.
+    Insert a red circle around the errors in the PostScript output.
 
 -j <int>[b], +j
    Output a measure number every <int> measures.
@@ -314,51 +297,16 @@ List of the options
 -V
    Show the version number.
 
--v
-   Produce SVG output instead of simple PS.
-
-   In this mode each page goes to a different file which name
-   is 'Outnnn.svg' (see option '-O').
-
 -w <unit>
    Adjust the right margin such that the staff width
    is <unit> (default: none).
 
    This corresponds to the ``%%staffwidth`` formatting parameter.
 
--X
-   Produce XML+SVG output instead of simple PS.
-
-   The default file name is 'Out.xhtml' (see option '-O').
-
 -x, +x
    Include the ``X:`` tune number in the title.
 
    This corresponds to the ``%%writefields`` formatting parameter.
-
--z
-   Produce SVG images from ABC embedded in markup language files
-   (HTML, XHTML..).
-
-   The source file is copied to the output file and the ABC sequences
-   are converted to SVG images.
-   The ABC sequences start by either ``%abc..`` or ``X:..``
-   and stop on the first markup tag (``<..``).
-
-   The generation creates one image per block, i.e. a music line
-   or a text block. For a same rendering as the other SVG generation
-   (-g, -v or -X), don't forget to set the line space to null, for
-   example enclosing the ABC sequences by::
-
-      <div style="line-height:0"> .. </div>
-
-   There can be only one output file.
-
-   Note that the default output file is 'Out.xhtml', so, don't
-   forget to change the file type if you generate HTML (.html)
-   or XML (.xml) files.
-
-   See "sample8.html" for a source example.
 
 -0, +0
    Split tunes across page breaks if necessary.
@@ -660,3 +608,6 @@ Parts of this manual have been written by Anselm Lingnau
 
 Permission is granted to copy, distribute and/or modify this
 document as long as its origin is not misrepresented.
+
+An independent fork for modifications was started by Brian Wright.
+<https://github.com/PennRobotics/abcm2ps-edits>
