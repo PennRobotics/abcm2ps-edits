@@ -14,6 +14,7 @@ GitHub template.
 
 ## TODO
 
+- [ ] fix build scripts and docs (they are currently untested!)
 - [ ] time signature using font glyphs
 - [ ] other symbols using font glyphs
   - (TODO: add a list of missing/desired symbols here)
